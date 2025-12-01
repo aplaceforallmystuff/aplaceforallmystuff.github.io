@@ -192,7 +192,7 @@
             <div class="links">
                 <a href="https://github.com/aplaceforallmystuff">GitHub</a>
                 <a href="https://jimchristian.net">Website</a>
-                <a href="https://linkedin.com/in/jimchristian">LinkedIn</a>
+                <a href="https://linkedin.com/in/jim-christian-digital">LinkedIn</a>
             </div>
         </header>
 
@@ -218,19 +218,8 @@
                             <a href="https://www.npmjs.com/package/mcp-pihole-server"><img src="https://img.shields.io/npm/v/mcp-pihole-server.svg" alt="npm"></a>
                         </div>
                     </div>
-                    <p class="project-desc">MCP server for Pi-hole DNS ad blocker. Query stats, manage blocklists, whitelist/blacklist domains.</p>
+                    <p class="project-desc">MCP server for Pi-hole v6 API. Control DNS blocking, query stats, manage blocklists, whitelist/blacklist domains.</p>
                     <div class="project-install">npx mcp-pihole-server</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/mcp-moneywiz" class="project-name">mcp-moneywiz</a>
-                        <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-moneywiz-server"><img src="https://img.shields.io/npm/v/mcp-moneywiz-server.svg" alt="npm"></a>
-                        </div>
-                    </div>
-                    <p class="project-desc">MCP server for MoneyWiz personal finance. Analyze spending, track accounts, get savings recommendations.</p>
-                    <div class="project-install">npx mcp-moneywiz-server</div>
                 </div>
 
                 <div class="project">
@@ -240,7 +229,7 @@
                             <a href="https://www.npmjs.com/package/mcp-homescan"><img src="https://img.shields.io/npm/v/mcp-homescan.svg" alt="npm"></a>
                         </div>
                     </div>
-                    <p class="project-desc">MCP server for home network scanning. Discover devices, check ports, monitor your local network.</p>
+                    <p class="project-desc">MCP server for home network discovery and security scanning. Discover devices, check ports, monitor your local network.</p>
                     <div class="project-install">npx mcp-homescan</div>
                 </div>
 
@@ -251,8 +240,41 @@
                             <a href="https://www.npmjs.com/package/mcp-threatintel"><img src="https://img.shields.io/npm/v/mcp-threatintel.svg" alt="npm"></a>
                         </div>
                     </div>
-                    <p class="project-desc">MCP server for threat intelligence. Check IPs, domains, and hashes against multiple threat feeds.</p>
+                    <p class="project-desc">MCP server for unified threat intelligence - AlienVault OTX, AbuseIPDB, GreyNoise, and abuse.ch feeds. Check IPs, domains, and hashes.</p>
                     <div class="project-install">npx mcp-threatintel</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-fantastical" class="project-name">mcp-fantastical</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-fantastical"><img src="https://img.shields.io/npm/v/mcp-fantastical.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for Fantastical calendar app. Create events, view calendar, and manage schedules using natural language.</p>
+                    <div class="project-install">npx mcp-fantastical</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-pickaxe" class="project-name">mcp-pickaxe</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-pickaxe"><img src="https://img.shields.io/npm/v/mcp-pickaxe.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for the Pickaxe platform. Manage AI agents, knowledge bases, users, and analytics through natural language.</p>
+                    <div class="project-install">npx mcp-pickaxe</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-kit" class="project-name">mcp-kit</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-kit"><img src="https://img.shields.io/npm/v/mcp-kit.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for Kit.com (ConvertKit) email marketing. Manage subscribers, broadcasts, sequences, tags, and forms.</p>
+                    <div class="project-install">npx mcp-kit</div>
                 </div>
 
             </div>
@@ -264,24 +286,34 @@
 
                 <div class="project">
                     <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/taches-cc-resources" class="project-name">taches-cc-resources</a>
-                        <div class="badges">
-                            <span class="tag claude">plugin</span>
-                        </div>
-                    </div>
-                    <p class="project-desc">Claude Code plugin pack with skills for creating skills, hooks, slash commands, subagents, and meta-prompts. Includes mental model commands for structured thinking.</p>
-                    <div class="project-install">claude plugins add aplaceforallmystuff/taches-cc-resources</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
                         <a href="https://github.com/aplaceforallmystuff/cheaters-generator" class="project-name">cheaters-generator</a>
                         <div class="badges">
                             <span class="tag claude">skill</span>
                         </div>
                     </div>
-                    <p class="project-desc">Generate a personal Claude Code cheatsheet. Creates a searchable reference for your commands, skills, plugins, and MCP servers.</p>
-                    <div class="project-install">claude skills add aplaceforallmystuff/cheaters-generator</div>
+                    <p class="project-desc">Generate a personal Claude Code cheatsheet. Creates a searchable reference for your commands, skills, plugins, and MCP servers. Inspired by Brett Terpstra's Cheaters.</p>
+                    <div class="project-install">claude plugins install aplaceforallmystuff/cheaters-generator</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="icon">📦</span> Other Projects</h2>
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/dayone-to-obsidian" class="project-name">dayone-to-obsidian</a>
+                    </div>
+                    <p class="project-desc">Export Day One journal entries directly into Obsidian daily notes. Preserves photos, metadata, and formatting.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/ISS-Tracker" class="project-name">ISS-Tracker</a>
+                    </div>
+                    <p class="project-desc">Split screen ISS tracker showing satellite trajectory and live view from the ISS video feed.</p>
                 </div>
 
             </div>
