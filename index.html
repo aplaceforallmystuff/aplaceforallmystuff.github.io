@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim Christian | Code & Tools</title>
+    <meta name="description" content="MCP servers, Claude Code plugins, and other tools by Jim Christian">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+            --green: #3fb950;
+            --purple: #a371f7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .links {
+            margin-top: 1rem;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+
+        .links a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2 .icon {
+            font-size: 1.1rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .project {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.25rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-name {
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .project-name:hover {
+            text-decoration: underline;
+        }
+
+        .badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badges img {
+            height: 20px;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-install {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.5rem 0.75rem;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.85rem;
+            color: var(--green);
+            overflow-x: auto;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.15rem 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-right: 0.25rem;
+        }
+
+        .tag.mcp { border-color: var(--purple); color: var(--purple); }
+        .tag.claude { border-color: var(--accent); color: var(--accent); }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .project-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jim Christian</h1>
+            <p class="tagline">MCP servers, Claude Code tools, and other experiments</p>
+            <div class="links">
+                <a href="https://github.com/aplaceforallmystuff">GitHub</a>
+                <a href="https://jimchristian.net">Website</a>
+                <a href="https://linkedin.com/in/jimchristian">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2><span class="icon">🔌</span> MCP Servers</h2>
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-arr" class="project-name">mcp-arr</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-arr-server"><img src="https://img.shields.io/npm/v/mcp-arr-server.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for the *arr media management suite - Sonarr, Radarr, Lidarr, Readarr, Prowlarr. Includes TRaSH Guides integration for quality profile recommendations.</p>
+                    <div class="project-install">npx mcp-arr-server</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-pihole" class="project-name">mcp-pihole</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-pihole-server"><img src="https://img.shields.io/npm/v/mcp-pihole-server.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for Pi-hole DNS ad blocker. Query stats, manage blocklists, whitelist/blacklist domains.</p>
+                    <div class="project-install">npx mcp-pihole-server</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-moneywiz" class="project-name">mcp-moneywiz</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-moneywiz-server"><img src="https://img.shields.io/npm/v/mcp-moneywiz-server.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for MoneyWiz personal finance. Analyze spending, track accounts, get savings recommendations.</p>
+                    <div class="project-install">npx mcp-moneywiz-server</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-homescan" class="project-name">mcp-homescan</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-homescan"><img src="https://img.shields.io/npm/v/mcp-homescan.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for home network scanning. Discover devices, check ports, monitor your local network.</p>
+                    <div class="project-install">npx mcp-homescan</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-threatintel" class="project-name">mcp-threatintel</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-threatintel"><img src="https://img.shields.io/npm/v/mcp-threatintel.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for threat intelligence. Check IPs, domains, and hashes against multiple threat feeds.</p>
+                    <div class="project-install">npx mcp-threatintel</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="icon">🛠️</span> Claude Code Tools</h2>
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/taches-cc-resources" class="project-name">taches-cc-resources</a>
+                        <div class="badges">
+                            <span class="tag claude">plugin</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Claude Code plugin pack with skills for creating skills, hooks, slash commands, subagents, and meta-prompts. Includes mental model commands for structured thinking.</p>
+                    <div class="project-install">claude plugins add aplaceforallmystuff/taches-cc-resources</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/cheaters-generator" class="project-name">cheaters-generator</a>
+                        <div class="badges">
+                            <span class="tag claude">skill</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Generate a personal Claude Code cheatsheet. Creates a searchable reference for your commands, skills, plugins, and MCP servers.</p>
+                    <div class="project-install">claude skills add aplaceforallmystuff/cheaters-generator</div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Built by <a href="https://jimchristian.net">Jim Christian</a> in Valencia, Spain</p>
+        </footer>
+    </div>
+</body>
+</html>
