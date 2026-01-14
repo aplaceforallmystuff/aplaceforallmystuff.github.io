@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jim Christian | Code & Tools</title>
-    <meta name="description" content="MCP servers, Claude Code plugins, and other tools by Jim Christian">
+    <meta name="description" content="MCP servers, CLI tools, and Claude Code extensions by Jim Christian">
     <style>
         :root {
             --bg: #0d1117;
@@ -16,6 +16,7 @@
             --accent-hover: #79b8ff;
             --green: #3fb950;
             --purple: #a371f7;
+            --orange: #d29922;
         }
 
         * {
@@ -86,6 +87,13 @@
 
         h2 .icon {
             font-size: 1.1rem;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
         }
 
         .projects {
@@ -159,6 +167,7 @@
 
         .tag.mcp { border-color: var(--purple); color: var(--purple); }
         .tag.claude { border-color: var(--accent); color: var(--accent); }
+        .tag.cli { border-color: var(--orange); color: var(--orange); }
 
         footer {
             text-align: center;
@@ -188,7 +197,7 @@
     <div class="container">
         <header>
             <h1>Jim Christian</h1>
-            <p class="tagline">MCP servers, Claude Code tools, and other experiments</p>
+            <p class="tagline">MCP servers, CLI tools, and Claude Code extensions</p>
             <div class="links">
                 <a href="https://github.com/aplaceforallmystuff">GitHub</a>
                 <a href="https://jimchristian.net">Website</a>
@@ -198,6 +207,7 @@
 
         <section>
             <h2><span class="icon">🔌</span> MCP Servers</h2>
+            <p class="section-desc">Model Context Protocol servers for Claude Desktop and Claude Code</p>
             <div class="projects">
 
                 <div class="project">
@@ -207,7 +217,7 @@
                             <a href="https://www.npmjs.com/package/mcp-arr-server"><img src="https://img.shields.io/npm/v/mcp-arr-server.svg" alt="npm"></a>
                         </div>
                     </div>
-                    <p class="project-desc">MCP server for the *arr media management suite - Sonarr, Radarr, Lidarr, Readarr, Prowlarr. Includes TRaSH Guides integration for quality profile recommendations.</p>
+                    <p class="project-desc">MCP server for the *arr media management suite — Sonarr, Radarr, Lidarr, Readarr, Prowlarr. Includes TRaSH Guides integration for quality profile recommendations.</p>
                     <div class="project-install">npx mcp-arr-server</div>
                 </div>
 
@@ -220,28 +230,6 @@
                     </div>
                     <p class="project-desc">MCP server for Pi-hole v6 API. Control DNS blocking, query stats, manage blocklists, whitelist/blacklist domains.</p>
                     <div class="project-install">npx mcp-pihole-server</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/mcp-homescan" class="project-name">mcp-homescan</a>
-                        <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-homescan"><img src="https://img.shields.io/npm/v/mcp-homescan.svg" alt="npm"></a>
-                        </div>
-                    </div>
-                    <p class="project-desc">MCP server for home network discovery and security scanning. Discover devices, check ports, monitor your local network.</p>
-                    <div class="project-install">npx mcp-homescan</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/mcp-threatintel" class="project-name">mcp-threatintel</a>
-                        <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-threatintel-server"><img src="https://img.shields.io/npm/v/mcp-threatintel-server.svg" alt="npm"></a>
-                        </div>
-                    </div>
-                    <p class="project-desc">MCP server for unified threat intelligence - AlienVault OTX, AbuseIPDB, GreyNoise, and abuse.ch feeds. Check IPs, domains, and hashes.</p>
-                    <div class="project-install">npx mcp-threatintel-server</div>
                 </div>
 
                 <div class="project">
@@ -270,33 +258,11 @@
                     <div class="project-header">
                         <a href="https://github.com/aplaceforallmystuff/mcp-kit" class="project-name">mcp-kit</a>
                         <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-kit"><img src="https://img.shields.io/npm/v/mcp-kit.svg" alt="npm"></a>
+                            <a href="https://www.npmjs.com/package/kit-mcp-server"><img src="https://img.shields.io/npm/v/kit-mcp-server.svg" alt="npm"></a>
                         </div>
                     </div>
                     <p class="project-desc">MCP server for Kit.com (ConvertKit) email marketing. Manage subscribers, broadcasts, sequences, tags, and forms.</p>
-                    <div class="project-install">npx mcp-kit</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/mcp-wisdom" class="project-name">mcp-wisdom</a>
-                        <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-wisdom"><img src="https://img.shields.io/npm/v/mcp-wisdom.svg" alt="npm"></a>
-                        </div>
-                    </div>
-                    <p class="project-desc">Philosophy-grounded thinking frameworks for Claude. Stoic, cognitive, mindfulness, and strategic wisdom tools for better decisions.</p>
-                    <div class="project-install">npx mcp-wisdom</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-header">
-                        <a href="https://github.com/aplaceforallmystuff/mcp-wp-abilities" class="project-name">mcp-wp-abilities</a>
-                        <div class="badges">
-                            <a href="https://www.npmjs.com/package/mcp-wp-abilities"><img src="https://img.shields.io/npm/v/mcp-wp-abilities.svg" alt="npm"></a>
-                        </div>
-                    </div>
-                    <p class="project-desc">MCP server for WordPress 6.9+ Abilities API. Dynamically discovers and exposes WordPress capabilities as AI-accessible tools.</p>
-                    <div class="project-install">npx mcp-wp-abilities</div>
+                    <div class="project-install">npx kit-mcp-server</div>
                 </div>
 
                 <div class="project">
@@ -321,6 +287,47 @@
                     <div class="project-install">npx mcp-piwik</div>
                 </div>
 
+                <div class="project">
+                    <div class="project-header">
+                        <a href="https://github.com/aplaceforallmystuff/mcp-wp-abilities" class="project-name">mcp-wp-abilities</a>
+                        <div class="badges">
+                            <a href="https://www.npmjs.com/package/mcp-wp-abilities"><img src="https://img.shields.io/npm/v/mcp-wp-abilities.svg" alt="npm"></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">MCP server for WordPress 6.9+ Abilities API. Dynamically discovers and exposes WordPress capabilities as AI-accessible tools.</p>
+                    <div class="project-install">npx mcp-wp-abilities</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="icon">⌨️</span> CLI Tools</h2>
+            <p class="section-desc">Command-line interfaces that save ~1500 tokens vs MCP servers in Claude Code</p>
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-name">moneywiz</span>
+                        <div class="badges">
+                            <span class="tag cli">CLI</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Personal finance CLI for MoneyWiz. Query accounts, transactions, spending by category, and income vs expenses. All output as JSON for piping to jq.</p>
+                    <div class="project-install">moneywiz accounts | moneywiz spending --period "this month"</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-name">piwik</span>
+                        <div class="badges">
+                            <span class="tag cli">CLI</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Piwik PRO analytics CLI. Query sites, pageviews, traffic sources, and goal conversions from the command line.</p>
+                    <div class="project-install">piwik sites | piwik summary &lt;site-id&gt; --from 2026-01-01</div>
+                </div>
+
             </div>
         </section>
 
@@ -332,11 +339,11 @@
                     <div class="project-header">
                         <a href="https://github.com/aplaceforallmystuff/cheaters-generator" class="project-name">cheaters-generator</a>
                         <div class="badges">
-                            <span class="tag claude">skill</span>
+                            <span class="tag claude">plugin</span>
                         </div>
                     </div>
-                    <p class="project-desc">Generate a personal Claude Code cheatsheet. Creates a searchable reference for your commands, skills, plugins, and MCP servers. Inspired by Brett Terpstra's Cheaters.</p>
-                    <div class="project-install">claude plugins install aplaceforallmystuff/cheaters-generator</div>
+                    <p class="project-desc">Generate a personal Claude Code cheatsheet. Creates a searchable HTML reference for your commands, skills, agents, and MCP servers. Inspired by Brett Terpstra's Cheaters.</p>
+                    <div class="project-install">claude plugin install aplaceforallmystuff/cheaters-generator</div>
                 </div>
 
             </div>
